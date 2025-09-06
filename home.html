@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- css -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+
+  <title>Home</title>
+</head>
+
+<body class="bod">
+
+
+  <nav id="nav_id" class="navbar navbar-expand-md  pt-4 navbar-dark py-0 fixed-top">
+    <!-- Brand -->
+    <a id="BRAND" onmouseover="PlaySound('studyapp')" onmouseout="StopSound('studyapp')" class="navbar-brand"
+      href="home.html">Smart Study<i class="fa fa-book" aria-hidden="true"></i></a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul id="itemsOfNav" class="navbar-nav  ml-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a onmouseover="PlaySound('home')" onmouseout="StopSound('home')" class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a onmouseover="PlaySound('myLearn')" onmouseout="StopSound('myLearn')" class="nav-link"
+            href="mylearning.html">My learning</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a onmouseover="PlaySound('notes')" onmouseout="StopSound('notes')" class="nav-link"
+            href="notes.html">Notes</a>
+        </li>
+        <li class="nav-item">
+          <a onmouseover="PlaySound('test')" onmouseout="StopSound('test')" class="nav-link" href="test.html">Test</a>
+        </li>
+        <li class="nav-item">
+          <a onmouseover="PlaySound('about')" onmouseout="StopSound('about')" class="nav-link"
+            href="about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- home -->
+  <section>
+    <div class="container-fluid">
+      <div class="row  mt-5  d-flex flex-column   align-items-center">
+        <div id="head" class="align-items-center col-md-6  col-sm-12    text-center  d-none d-md-block">
+          <h2 onmouseover="PlaySound('godown')" onmouseout="StopSound('godown')">THE <span>/</span> STUDY <span>/</span>
+            APP </h2>
+        </div>
+        <div class="container">
+          <div class="button">
+            <div class="icon">
+
+              <a onmouseover="PlaySound('go')" onmouseout="StopSound('go')" href="mylearning.html"><i
+                  class="fa fa-floppy-o">Go!! </i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- voice control -->
+  <!-- next page -->
+  <script src="https://unpkg.com/anycontrol/dist/index.umd.min.js"></script>
+  <script>
+      var ctrl = new anycontrol()
+
+      ctrl.addCommand("go to home", function () {
+    document.location.href = 'home.html'
+  });
+      ctrl.addCommand("go to test", function () {
+          document.location.href = 'test.html'
+      });
+      ctrl.addCommand("go to notes", function () {
+          document.location.href = 'notes.html'
+      });
+      ctrl.addCommand("go to books", function () {
+          document.location.href = 'mylearning.html'
+      });
+      ctrl.addCommand("open english book", function () {
+          document.location.href = 'english.html'
+      });
+      ctrl.addCommand("open history book", function () {
+          document.location.href = 'history.html'
+      });
+      ctrl.addCommand("open geography book", function () {
+          document.location.href = 'geography.html'
+      });
+
+      ctrl.start();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  <!-- audio source -->
+  <audio id="studyapp" src="assets/audio/studyapp.mp3" type="audio/mp3"></audio>
+  <audio id="home" src="assets/audio/Home.mp3" type="audio/mp3"></audio>
+  <audio id="myLearn" src="assets/audio/My Learning.mp3" type="audio/mp3"></audio>
+  <audio id="about" src="assets/audio/About.mp3" type="audio/mp3"></audio>
+  <audio id="go" src="assets/audio/Go.mp3" type="audio/mp3"></audio>
+  <audio id="godown" src="assets/audio/lookdown.mp3" type="audio/mp3"></audio>
+  <audio id="notes" src="assets/audio/notes.mp3" type="audio/mp3"></audio>
+  <audio id="test" src="assets/audio/giveTest.mp3" type="audio/mp3"></audio>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+
+  <script src="https://kit.fontawesome.com/589850ed4a.js" crossorigin="anonymous"></script>
+  <script async src="assets/js/script.js"></script>
+
+  <!-- <script>
+    $(function () {
+        $(document).scroll(function () {
+            var $nav = $("#nav_id");
+            $nav.toggleClass("scrolledd", $(this).scrollTop() > $nav.height());
+        });
+    });
+</script> -->
+</body>
+
+</html>
