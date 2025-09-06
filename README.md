@@ -1,4 +1,7 @@
-SmartVisionAI
+SMARTVISION AI
+
+
+
 
 SmartVisionAI is an AI-powered learning platform designed to assist visually impaired students by making digital education more accessible. The platform leverages Python, JavaScript, TensorFlow, and Speech Recognition to create an inclusive, interactive learning experience.
 
